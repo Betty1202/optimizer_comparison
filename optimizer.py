@@ -5,13 +5,12 @@ OPTIMIER = {
     "Adagrad": Adagrad,
     "Adam": Adam,
     "AdamW": AdamW,
-    "SparseAdam": SparseAdam,
     "Adamax": Adamax,
     "ASGD": ASGD,
-    "LBFGS": LBFGS,
+    # "LBFGS": LBFGS,
     "RMSprop": RMSprop,
     "Rprop": Rprop,
     "SGD": SGD
 }
 
-DEFAULT_OPTIMIER=list(OPTIMIER.keys())
+DEFAULT_OPTIMIER = list(OPTIMIER.keys())

@@ -25,6 +25,7 @@ class Trainer:
         evaluation = Evaluation()
         for epoch in range(self.epochs_num):
             self.iteration(dataloader, progress_bar, lr_scheduler, evaluation, True)
+        return evaluation
 
     def test(self, dataloader):
         num_training_steps = self.epochs_num
@@ -37,6 +38,7 @@ class Trainer:
         )
         evaluation = Evaluation()
         self.iteration(dataloader, progress_bar, lr_scheduler, evaluation, False)
+        return evaluation
 
     def iteration(self, dataloader, progress_bar, lr_scheduler, evaluation: Evaluation, is_train: bool):
         self.model.train(is_train)
