@@ -1,9 +1,11 @@
+from timeit import default_timer as timer
+
 import torch
 from tqdm.auto import tqdm
 from transformers import get_scheduler
-from timeit import default_timer as timer
-from optimizer import OPTIMIER
+
 from evaluation import Evaluation
+from optimizer import OPTIMIER
 
 
 class Trainer:

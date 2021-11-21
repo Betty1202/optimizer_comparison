@@ -1,5 +1,6 @@
 import argparse
 import logging
+import os
 
 import torch
 from transformers import BertForSequenceClassification
@@ -7,7 +8,6 @@ from transformers import BertForSequenceClassification
 from data import get_data
 from optimizer import DEFAULT_OPTIMIER
 from trainer import Trainer
-import os
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',

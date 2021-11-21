@@ -1,7 +1,8 @@
-from datasets import load_dataset
-from transformers import BertTokenizer
-from torch.utils.data import DataLoader
 import logging
+
+from datasets import load_dataset
+from torch.utils.data import DataLoader
+from transformers import BertTokenizer
 
 
 def get_data(size: int):

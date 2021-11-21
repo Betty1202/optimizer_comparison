@@ -1,8 +1,9 @@
+import logging
+
+import numpy as np
 import torch
 from datasets import load_metric
-import numpy as np
 from pandas import DataFrame
-import logging
 
 
 class Evaluation:
