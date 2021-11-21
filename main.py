@@ -17,7 +17,7 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message
 def get_arguments():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--optimizer", choices=DEFAULT_OPTIMIER, default='SGD', type=str,
+    parser.add_argument("--optimizer", choices=DEFAULT_OPTIMIER, default='Adam', type=str,
                         help=f"Choose optimizer from {DEFAULT_OPTIMIER}")
     parser.add_argument("--epoch", default=10, type=int,
                         help=f"Epoch number")
