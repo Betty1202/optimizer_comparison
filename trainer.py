@@ -12,7 +12,12 @@ class Trainer:
     def __init__(self, model, device: torch.device, args):
         self.device = device
         self.model = model.to(device)
-        self.optimizer = OPTIMIER[args.optimizer](model.parameters(), 5e-5)
+        if args.optimizer == "Momentum":
+            self.optimizer = OPTIMIER[args.optimizer](model.parameters(), 5e-5, momentum=0.9)
+        elif args.optimizer == "Nesterov":
+            self.optimizer = OPTIMIER[args.optimizer](model.parameters(), 5e-5, momentum=0.9, nesterov=True)
+        else:
+            self.optimizer = OPTIMIER[args.optimizer](model.parameters(), 5e-5)
         self.epochs_num = args.epoch
 
     def train(self, dataloader):

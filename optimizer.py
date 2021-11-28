@@ -1,16 +1,18 @@
 from torch.optim import *
 
 OPTIMIER = {
-    "Adadelta": Adadelta,
+    "SGD": SGD,
+    "Momentum": SGD,
+    "Nesterov": SGD,
+
     "Adagrad": Adagrad,
+    "RMSprop": RMSprop,
+    "Adadelta": Adadelta,
+
     "Adam": Adam,
     "AdamW": AdamW,
     "Adamax": Adamax,
-    "ASGD": ASGD,
-    # "LBFGS": LBFGS,
-    "RMSprop": RMSprop,
-    "Rprop": Rprop,
-    "SGD": SGD
+
 }
 
 DEFAULT_OPTIMIER = list(OPTIMIER.keys())
