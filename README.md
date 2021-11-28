@@ -33,3 +33,6 @@ python main.py --optimizer SGD --epoch 5 --dataset_size 10000
 
 After running the above script, you will get fine-tuning and evaluation results in _evaluation/_. Besides, _
 xxx_iter.xlsx_ records results from each iteration, and _xxx_epoch.xlsx_ records results from each epoch.
+
+## Report
+See details in [report](常见优化器对比.pdf), which includes optimizers' principle and analysis of experimental results.
